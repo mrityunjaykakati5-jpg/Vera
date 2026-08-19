@@ -1,4 +1,3 @@
-
 from flask import Flask, request, jsonify, Response
 import sqlite3, os
 
@@ -35,14 +34,14 @@ HTML_BASE = """
 <meta name="theme-color" content="#000000">
 <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/122/122932.png">
 <style>
-body{margin:0;background:#0a0a0a;color:#fff;font-family:system-ui;padding:0}
-.header{padding:25px 15px;text-align:center}
-.search-box{margin:25px auto;max-width:600px;display:flex;gap:8px;padding:0 15px}
-input{flex:1;padding:16px 20px;border-radius:30px;border:0;font-size:17px}
-button{padding:16px 26px;border-radius:30px;border:0;background:#fff;color:#000;font-weight:900}
-.results{max-width:700px;margin:0 auto;text-align:left;padding:10px 20px}
-.res{background:#1a1a1a;padding:15px;border-radius:15px;margin-bottom:12px}
-a{color:#fff;text-decoration:none}
+body{{margin:0;background:#0a0a0a;color:#fff;font-family:system-ui;padding:0}}
+.header{{padding:25px 15px;text-align:center}}
+.search-box{{margin:25px auto;max-width:600px;display:flex;gap:8px;padding:0 15px}}
+input{{flex:1;padding:16px 20px;border-radius:30px;border:0;font-size:17px}}
+button{{padding:16px 26px;border-radius:30px;border:0;background:#fff;color:#000;font-weight:900}}
+.results{{max-width:700px;margin:0 auto;text-align:left;padding:10px 20px}}
+.res{{background:#1a1a1a;padding:15px;border-radius:15px;margin-bottom:12px}}
+a{{color:#fff;text-decoration:none}}
 </style>
 </head>
 <body>
@@ -56,8 +55,8 @@ a{color:#fff;text-decoration:none}
 </div>
 <div class="results">{results_html}</div>
 <script>
-function doSearch(){let q=document.getElementById('q').value; if(!q) return; location.href='/?q='+encodeURIComponent(q);}
-if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js')}
+function doSearch(){{let q=document.getElementById('q').value; if(!q) return; location.href='/?q='+encodeURIComponent(q);}}
+if('serviceWorker' in navigator){{navigator.serviceWorker.register('/sw.js')}}
 </script>
 </body>
 </html>
